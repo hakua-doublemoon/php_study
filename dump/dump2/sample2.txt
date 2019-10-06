@@ -1,0 +1,9 @@
+Cancer = {
+    Gloss = Crab
+},
+Leo = {
+    Gloss = Lion
+},
+Virgo = {
+    Gloss = Maiden
+},

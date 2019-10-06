@@ -1,0 +1,9 @@
+Aries = {
+    Gloss = Ram
+},
+Taurus = {
+    Gloss = Bull
+},
+Gemini = {
+    Gloss = Twin
+},

@@ -6,18 +6,29 @@
   </head>
   <body>
     <script type="text/javascript" src="hello.js"></script>
-    <?php 
+    <script type="text/javascript" src="sub_views/obj_parse.js" async></script>
+    <link rel="stylesheet" type="text/css" href="hello.css" media="print" onload="this.media='all'">
+    <!--?php 
         echo '<h2 id="cgi_text"> Hello : ' . '</h2>'; 
-    ?>
-    <p>Names : <br>
-    <form id="form1" method="post" action="">
-      <select name="Names" size="1">
-        <option value="None"></option>
-        <option value="Alice">アリス</option>
-        <option value="Bianka">ビアンカ</option>
-        <option value="Catherine">キャサリン</option>
-      </select>
-    </form>
-    </p>
+    ?-->
+    <div class="box" id="fs_div">
+      <p>Names:</p>
+      <form id="form1" method="post" action="">
+        <select id="file_select" size="1">
+          <option></option>
+        </select>
+      </form>
+    </div>
+    <div class="box" id="os_div">
+      <p>Objects:</p>
+      <form id="form2" method="post" action="">
+        <select id="obj_select" size="1">
+          <option></option>
+        </select>
+      </form>
+    </div>
+    <table id="obj_table">
+      <tr> <th>#</th> </tr>
+    </table>
   </body>
 </html>

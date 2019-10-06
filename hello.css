@@ -1,0 +1,27 @@
+.box{
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 50px;
+}
+
+.boxContainer{
+  font-size: 0;
+}
+
+table {
+  margin-top: 50px;
+  border-collapse: collapse;
+  border: solid 2px orange;
+}
+table tr {
+  border-bottom: solid 1px orange;
+}
+table th, table td {
+  border-left: solid 1px orange;
+  text-align: right;
+  padding: 2px 10px;
+}
+table td {
+  font-family: monospace;
+}
+
