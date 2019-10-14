@@ -5,5 +5,5 @@ Leo = {
     Gloss = Lion
 },
 Virgo = {
-    Gloss = Maiden
+    Gloss = Maid…n
 },

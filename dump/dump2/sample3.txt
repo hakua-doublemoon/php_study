@@ -1,9 +1,18 @@
-Cancer = {
-    Gloss = Crab
+Libra = {
+    sign =: {
+        Gloss = Scales
+        Celestial =: {
+            body = Venus
+        }
+    }
+    Dates =: {
+    	Start = 9/24
+    	End = 10/23
+    }
 },
-Leo = {
-    Gloss = Lion
+Scorpio = {
+    Gloss = Scorpion
 },
-Virgo = {
-    Gloss = Maid…n
+Sagitrarius = {
+    Gloss = Archer
 },

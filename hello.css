@@ -18,10 +18,32 @@ table tr {
 }
 table th, table td {
   border-left: solid 1px orange;
-  text-align: right;
   padding: 2px 10px;
+  text-overflow: "";
+  overflow: hidden;
+  white-space: nowrap;
 }
 table td {
+  text-align: right;
   font-family: monospace;
 }
 
+.top_th {
+  height: 16px;
+}
+.top_th:before {
+  float: left;
+  content: '';
+  margin-top: 4px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  color: orange;
+  background-color: orange;
+  box-shadow: 0px 0px 0px 2px orange; /* borderの外側 */
+  border: solid 2px lightgoldenrodyellow;
+  outline-offset: 1px;
+}
+.top_th:hover:before {
+  box-shadow: 0px 0px 0px 3px rgb(253, 185, 58);
+}
