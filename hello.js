@@ -60,3 +60,4 @@ window.onload = () => {
         obj_select.addEventListener('change', obj_select_on_change);
     });
 }
+

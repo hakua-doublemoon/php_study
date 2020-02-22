@@ -30,5 +30,10 @@
     <table id="obj_table">
       <tr> <th>#</th> </tr>
     </table>
+
+    <hr>
+    <div id="dbg_str"></div>
+
   </body>
 </html>
+

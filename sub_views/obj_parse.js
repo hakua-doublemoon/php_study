@@ -45,8 +45,9 @@ var obj_select_on_change_impl = function(param)
     $("#obj_table").empty();
     $.post("controllers/object_analyze.php", param, (data) => {
         console.log(data);
+        var json_obj = JSON.parse(data);
         var tbl_str = ""
-        var lines = data.split("\n");
+        var lines = json_obj.data.split("\n");
         var tag_s = "<th>";
         var tag_e = "</th>";
         var head_cnt = 0;
@@ -104,6 +105,13 @@ var obj_select_on_change_impl = function(param)
                 }
             }
         });
+
+        if (json_obj.debug !== void 0) {
+            console.log("DBG: " + json_obj.debug);
+            $("#dbg_str").empty();
+            $("#dbg_str").append("<p>" + json_obj.debug + "</p>");
+            //$("<p>" + json_obj.debug + "</p>").appendTo("#dbg_str");
+        }
     });
 }
 

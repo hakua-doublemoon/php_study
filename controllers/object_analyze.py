@@ -2,11 +2,14 @@ import sys
 import re
 import pprint
 
+import collections
+
 args = sys.argv
 fname = args[1]
 target = args[2]
 
-retd = [{"#" : str(0)}]
+retd = collections.OrderedDict()
+retd["#"] = str(0)
 
 fp = open(fname, "r")
 has_found = False
@@ -34,17 +37,24 @@ for line in fp:
                 union_max = union_cnt
         else:
             strs = re.split('\s+', line)
-            retd[0].setdefault("".join(sub_attr)+strs[1], str(strs[3]))
+            #retd[0].setdefault("".join(sub_attr)+strs[1], str(strs[3]))
+            retd["".join(sub_attr)+strs[1]] = str(strs[3])
+            print('{},{}'.format("".join(sub_attr)+strs[1], str(strs[3])), file=sys.stderr) 
 
 fp.close()
 
-key_list = list(retd[0].keys())
+#key_list = list(retd[0].keys())
+key_list = list(retd.keys())
 attr_num = len(key_list)
+
 
 for i,k in enumerate(key_list):
     mark_num = k.count('@')
     for _ in range(mark_num, union_max):
         key_list[i] += '@'
+    #print(key_list[i], file=sys.stderr) 
+
+dbg_str = "<br>".join(key_list)
 
 head = []
 for i in range(0, union_max+1):
@@ -60,7 +70,11 @@ for i,key in enumerate(key_list):
 rets = ""
 for i in range(0, union_max+1):
     rets += ",".join(head[i]) + "\n"
-for d in retd:
-    rets += ','.join(d.values()) + "\n"
+#for d in retd:
+#    rets += ','.join(d.values()) + "\n"
+rets += ','.join(retd.values()) + "\n"
 
 print(rets)
+print("-----")
+print(dbg_str)
+
